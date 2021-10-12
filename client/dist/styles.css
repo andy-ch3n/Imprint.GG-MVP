@@ -1,0 +1,43 @@
+body {
+  background-image: url(./gradient-wallpaper-13.jpg)
+}
+
+.nav {
+  color: white;
+  font-size: xx-large;
+  padding: 10px;
+  position: absolute;
+  left: 0;
+  margin-left: 15px;
+}
+
+.nav-right {
+  color: white;
+  font-size: xx-large;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  margin-right: 15px;
+}
+
+.center {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  padding: 15px;
+}
+
+.input {
+  width: 25%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  margin-left: 15px;
+  margin-right: 15px;
+  opacity: 75%;
+}
