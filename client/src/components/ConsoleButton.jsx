@@ -5,14 +5,14 @@ const ConsoleButton = ({radValue, setRadio}) => {
   const [checked, setChecked] = useState(false);
 
   const radios = [
-    { name: 'PC', value: 'pc' },
+    { name: 'Origin', value: 'origin' },
     { name: 'PSN', value: 'psn' },
     { name: 'Xbox', value: 'xbox' },
   ];
 
   return (
     <>
-      <ButtonGroup className="mb-2">
+      <ButtonGroup className="mb-2 mt-2">
         {radios.map((radio, idx) => (
           <ToggleButton
             key={idx}
@@ -20,6 +20,7 @@ const ConsoleButton = ({radValue, setRadio}) => {
             type="radio"
             variant="secondary"
             name="radio"
+            className="mt-2"
             value={radio.value}
             checked={radValue === radio.value}
             onChange={(e) => setRadio(e.currentTarget.value)}

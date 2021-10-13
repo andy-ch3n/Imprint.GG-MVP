@@ -1,5 +1,19 @@
+html {
+  height: 100%;
+  background-image: url(./gradient-wallpaper-13.jpg);
+  background-repeat: no-repeat;
+}
+
 body {
-  background-image: url(./gradient-wallpaper-13.jpg)
+  color: #ffffff !important;
+  background-image: url(./gradient-wallpaper-13.jpg);
+  background-size: 100%;
+  min-height: 100%;
+}
+
+
+img {
+  opacity: 0.9;
 }
 
 .nav {
@@ -41,3 +55,37 @@ body {
   margin-right: 15px;
   opacity: 75%;
 }
+
+.banner {
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.rank {
+  padding: 20px;
+}
+
+.center-up {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.match {
+  text-align: right;
+  flex-wrap: wrap;
+}
+
+
+.photo {
+  width: 140px;
+}
+
+.padding {
+  padding: 15px;
+}
+
+/* .disclaimer {
+  margin-top: 50px;
+} */

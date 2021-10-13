@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import Nav from './Nav.jsx'
-import { Container, Button } from 'react-bootstrap'
+import { Container, Button, Row, Col} from 'react-bootstrap'
 import ConsoleButton from './ConsoleButton.jsx'
+import ProfileList from './ProfileList.jsx'
+
 
 
 
@@ -15,7 +16,7 @@ function App(props) {
   const [radioValue, setRadioValue] = useState('');
 
   const radios = [
-    {name: 'origin', value: 'pc'},
+    {name: 'origin', value: 'origin'},
     {name: 'PSN', value: 'psn'},
     {name: 'Xbox', value: 'xbox'}
   ]
@@ -24,41 +25,23 @@ function App(props) {
 
   useEffect(() => {
     // get request to the profile
-  }, [console, profile])
+  }, [profileExists])
 
 
-  function handleSubmit(console, gamerTag) {
-    axios.get(`/${console}/${gamerTag}/sessions`, {
-      console: console,
-      gamerTag: gamerTag,
-    }).then((results) => {
-        setProfile(results.data);
-      })
+  function handleSubmit(e) {
+    e.preventDefault()
+    axios.get(`/${radioValue}/${gamerTag}/sessions`).then((response) => {
+        setProfile(response.data);
+      }).then(setProfileExists(true))
       .catch((err) => {
         console.error(err);
       });
   }
 
 
-  function handleClick() {
-
-  }
-
-  const renderConsole = () => {
-    // if (console === "") {
-    //   return (
-    //     <button></button>
-    //   )
-    // } else {
-    //   return ( <button name="console" value={console} onClick={handleClick}>PC  </button>
-    //   <button name="console" value={console} onClick={handleClick}>PSN  </button>
-    //   <button name="console" value={console} onClick={handleClick}>XBOX  </button>
-    //   )
-    // }
-  }
-
-
   return (
+    profileExists ?
+    <ProfileList name={gamerTag} data={profile} setProfile={setProfile} /> :
     <div className="pg-background">
       <span className="nav">Imprint.gg</span>
       <span className="nav-right">Apex Legends</span>
