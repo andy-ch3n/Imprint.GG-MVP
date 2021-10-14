@@ -3,6 +3,7 @@ html {
   width: 100%;
   background-image: url(./gradient-wallpaper-13.jpg);
   background-repeat: no-repeat;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -11,6 +12,8 @@ body {
   background-size: 100%;
   min-height: 100%;
   min-width: 100%;
+  padding-bottom: 250px;
+  background-size: cover;
 }
 
 
@@ -24,7 +27,7 @@ img {
   padding: 10px;
   position: absolute;
   left: 0;
-  margin-left: 15px;
+  margin-left: 35px;
 }
 
 .nav-right {
@@ -33,7 +36,7 @@ img {
   padding: 10px;
   position: absolute;
   right: 0;
-  margin-right: 15px;
+  margin-right: 35px;
 }
 
 .center {
@@ -72,6 +75,9 @@ img {
   width: 100%;
   text-align: center;
   padding: 20px;
+  margin-top: 50px;
+  font-size: 80px;
+  color: #FFF8DC
 }
 
 .match {
@@ -81,7 +87,7 @@ img {
 
 
 .photo {
-  width: 140px;
+  width: 222px;
   margin-bottom: 20px;
 }
 
@@ -92,7 +98,8 @@ img {
 }
 
 .line-graph {
-  width: 50%;
+  margin-top: 50px;
+  width: 25%;
   height: 25%;
   size: 10px;
   margin: auto;
@@ -100,7 +107,87 @@ img {
   justify-content: center;
   color: black !important;
   font: bold;
+  background-color: white;
+  border-radius: 20px;
+  background-blend-mode: luminosity;
 }
 /* .disclaimer {
   margin-top: 50px;
 } */
+
+nav {
+  display: flex;
+  padding: 20px;
+  width: 100%;
+  justify-content: center;
+  height: 30%;
+  background-color: black;
+  background-image: url(./redgradient.jpeg)
+}
+
+
+ul {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+
+}
+
+.lightbulb {
+  padding: 20px;
+}
+
+.nav-header {
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+}
+
+.centeredtext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0%;
+  font-size: xx-large;
+}
+
+
+.player-wrapper {
+  width: auto;
+  height: auto;
+}
+.react-player {
+  padding-top: 56.25%;
+  position: relative;
+}
+
+
+.center-z {
+  text-align: center;
+}
+
+p.information {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 20px;
+}
+
+input[type="radio"] {
+  visibility:hidden;
+}
+
+input[type="radio"]:checked {
+  border: 6px solid black;
+}
+
+.character {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 20px;
+  color: #FFF8DC;
+  font-weight: bold;
+}

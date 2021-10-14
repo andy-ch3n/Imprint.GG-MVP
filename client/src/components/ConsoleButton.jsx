@@ -23,6 +23,7 @@ const ConsoleButton = ({radValue, setRadio}) => {
             className="mt-2"
             value={radio.value}
             checked={radValue === radio.value}
+            style={radValue === radio.value ? {backgroundColor: "orange"} : {backgroundColor: "grey"}}
             onChange={(e) => setRadio(e.currentTarget.value)}
           >
             {radio.name}

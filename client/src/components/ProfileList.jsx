@@ -6,6 +6,14 @@ import {Line} from 'react-chartjs-2';
 
 function ProfileList(props) {
 
+  const randomNum = Math.floor(Math.random() * 200)
+  const randomNum1 = Math.floor(Math.random() * 400)
+  const randomNum2 = Math.floor(Math.random() * 600)
+  const randomNum3 = Math.floor(Math.random() * 1000)
+
+
+
+  console.log(props.data)
   const state = {
     labels: ['Bronze', 'Silver', 'Gold',
              'Platinum', 'Diamond'],
@@ -15,32 +23,41 @@ function ProfileList(props) {
         fontColor: 'black',
         fill: false,
         lineTension: 0.5,
-        backgroundColor: 'rgba(75,192,192,1)',
-        borderColor: '#000000',
-        pointBackgroundColor: "#00000"
+        backgroundColor: 'rgba(0,0,0)',
+        borderColor: 'rgba(0,0,0)',
+        pointBackgroundColor: 'rgba(0,0,0)',
+        pointBorderColor: 'rgba(0,0,0)',
         borderWidth: 2,
-        data: [65, 59, 80, 81, 56]
+        data: [props.rank1, randomNum, randomNum1, randomNum2, randomNum3]
       }
     ],
     options: {
+      legend: {
+        fontColor: "black"
+      },
       scales: {
-          y: {
-              beginAtZero: true
-              fontColor: 'black'
+        gridLines: "black",
+          xAxes: [{
+            tickets: {
+              fontColor: "black"
+            }
+          }],
+          yAxes: {
+              beginAtZero: true,
+              fontColor: 'black',
+              color: 'black',
+              grindLines: 'black'
+
           }
       }
-  }
+   }
   }
 
   return (
 
+
     (props.data.data !== undefined) ?
       <div>
-          <Banner
-        title="Apex Legends"
-        imageClass="banner"
-        className="banner"
-        />
         <br/>
         <div className="line-graph">
         <Line
