@@ -15,7 +15,6 @@ app.use(express.static(__dirname + '/../client/dist'));
 
 
 app.use('/*', (req, res) => {
-  console.log('PARAMS', req.params["0"])
   const { body, method, params } = req;
   const axiosConfig = {
     method,
@@ -29,10 +28,8 @@ app.use('/*', (req, res) => {
   axios(axiosConfig)
     .then(({ data }) => {
       res.status(200).send(data);
-      console.log('>>>>>>>>>>>>>>>>>>>>>>>>>')
     })
     .catch((err) => {
-      console.log('errOR %%%%%%%%%%%%%%%%', err)
       res.status(400).send(err);
     });
 });

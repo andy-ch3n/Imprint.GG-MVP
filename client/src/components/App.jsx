@@ -21,6 +21,7 @@ function App(props) {
   const [rank2, setRank2] = useState('');
   const [rank3, setRank3] = useState('');
 
+
   const radios = [
     { name: 'origin', value: 'origin' },
     { name: 'PSN', value: 'psn' },
@@ -44,8 +45,6 @@ function App(props) {
         alert('username is invalid')
       }))
     getIndividualData()
-    var myLink = document.getElementById('main');
-    myLink.click()
   }
 
   function getIndividualData(e) {
@@ -66,34 +65,34 @@ function App(props) {
           <div>
             <nav>
               <Col>
-                </Col>
-                  <Col className="text-center">
-                    <h1 className="nav-header">Imprint.GG Apex Tracker for {gamerTag}</h1>
-                  </Col>
-                  <Col>
-                    </Col>
-                    </nav>
-                    <div>
-                      <img className="banner" src="banner.jpg"></img>
-                      <a className="centeredtext" href="#main">Ready, steady, go!</a>
-                    </div>
-                    <ProfileList kills={kills} percentileKills={percentileKills} name={gamerTag} data={profile} seasonKills={s7kills} rank1={rank1} rank2={rank2} rank3={rank3} />
-                  </div>
-                  :
-                  <div className="pg-background">
-                    <span className="nav">Imprint.gg</span>
-                    <span className="nav-right">Apex Legends</span>
-                    <form onSubmit={() => handleSubmit} className="center" id="form">
-                      <ConsoleButton radValue={radioValue} setRadio={setRadioValue} />
-                      <input className="input" type="text" name="gamertag" id="gamertag"
-                        value={gamerTag} placeholder="Enter Origin Username..." onChange={e => setGamerTag(e.target.value)}></input>
-                      <Button onClick={handleSubmit} variant="dark" className="button">Submit</Button>
-                    </form>
-                  </div>
+              </Col>
+              <Col className="text-center">
+                <h1 className="nav-header">Imprint.GG Apex Tracker for {gamerTag}</h1>
+              </Col>
+              <Col>
+              </Col>
+            </nav>
+            <div>
+              <img className="banner" src="banner.jpg"></img>
+              <a className="centeredtext" href="#main">Ready, steady, go!</a>
+            </div>
+            <ProfileList kills={kills} percentileKills={percentileKills} name={gamerTag} data={profile} seasonKills={s7kills} rank1={rank1} rank2={rank2} rank3={rank3} />
+          </div>
+          :
+          <div className="pg-background">
+            <span className="nav">Imprint.gg</span>
+            <span className="nav-right">Apex Legends</span>
+            <form onSubmit={() => handleSubmit} className="center" id="form">
+              <ConsoleButton radValue={radioValue} setRadio={setRadioValue} />
+              <input className="input" type="text" name="gamertag" id="gamertag"
+                value={gamerTag} placeholder="Enter Origin Username..." onChange={e => setGamerTag(e.target.value)}></input>
+              <Button onClick={handleSubmit} variant="dark" className="button">Submit</Button>
+            </form>
+          </div>
       }
-                </>
-                )
+    </>
+  )
 
 }
 
-                export default App;
+export default App;

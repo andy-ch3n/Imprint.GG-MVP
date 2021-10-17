@@ -51,6 +51,14 @@ function Profile(props) {
       />
       </>
     )
+  } else if (character === "Gibraltar") {
+    return (
+      <>
+      <ReactPlayer
+       url="https://www.youtube.com/watch?v=ccDyztf9FjU&ab_channel=ApexLegends"
+       />
+       </>
+    )
   }
 }
 

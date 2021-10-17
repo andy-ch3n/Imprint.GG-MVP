@@ -13,7 +13,6 @@ function ProfileList(props) {
 
 
 
-  console.log(props.data)
   const state = {
     labels: ['Bronze', 'Silver', 'Gold',
              'Platinum', 'Diamond'],
