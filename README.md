@@ -6,24 +6,24 @@
 
 * React.js
 * React-Bootstrap
--Node.js
--Express
--Webpack
+* Node.js
+* Express
+* Webpack
 
 **Getting Started**
 
--npm
--npm install npm@latest -g
+* npm
+* npm install npm@latest -g
 
 
 **Installation**
--Get a free API Key at https://tracker.gg/
--Clone the repo
--git clone https://github.com/andy-ch3n/mvp2222.git
+* Get a free API Key at https://tracker.gg/
+* Clone the repo
+* git clone https://github.com/andy-ch3n/mvp2222.git
 
 **Install NPM packages**
--npm install
--npm run build to build webpack
+* npm install
+* npm run build to build webpack
 
 
 **Enter your API in config.js**
