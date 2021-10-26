@@ -4,8 +4,8 @@
 
 **Built With**
 
--React.js
--React-Bootstrap
+* React.js
+* React-Bootstrap
 -Node.js
 -Express
 -Webpack
