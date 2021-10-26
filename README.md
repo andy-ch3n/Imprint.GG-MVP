@@ -1,4 +1,6 @@
-# MVP - Hackreactor project where we had to make a minimum viable product on any topic of choice in 48 hours.
+# MVP - Minimum Viable Product
+
+- Hackreactor project where we had to make a minimum viable product on any topic of choice in 48 hours.
 
 **Built With**
 
